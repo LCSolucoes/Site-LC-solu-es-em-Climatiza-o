@@ -191,6 +191,35 @@
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   }
+
+  /* Infinite Marquee Loop for Logo Carousel */
+  .lc-marquee-carousel-track {
+    display: flex;
+    width: max-content;
+    animation: lcMarquee 32s linear infinite;
+  }
+  .lc-marquee-carousel-track:hover {
+    animation-play-state: paused;
+  }
+  .lc-marquee-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(46, 151, 212, 0.12);
+    border-radius: 14px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 74px;
+    width: 190px;
+    box-shadow: 0 4px 15px rgba(10, 22, 40, 0.03);
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  .lc-marquee-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(10, 22, 40, 0.06);
+    border-color: rgba(46, 151, 212, 0.3);
+  }
 </style>
 <script>
   /* Mede a LARGURA REAL renderizada e aplica classes mobile.
@@ -277,11 +306,11 @@
           <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,0.78);margin:0 0 32px">Instalação profissional, manutenção ágil e limpeza profunda para residências, comércios e indústrias. Atendimento técnico especializado, sem surpresas e com garantia total.</p>
 
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:28px">
-            <div style="display:flex">
-              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2E97D4,#14387F);border:2.5px solid #0A1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;margin-right:-12px">J</div>
-              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#B8965A,#8B6D3F);border:2.5px solid #0A1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;margin-right:-12px">M</div>
-              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2E9E3F,#1C7A2C);border:2.5px solid #0A1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;margin-right:-12px">R</div>
-              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#14387F,#0A2252);border:2.5px solid #0A1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff">+</div>
+            <div style="display:flex;align-items:center">
+              <img src="./assets/avatar-hero1.png" alt="Cliente LC" width="42" height="42" style="width:42px;height:42px;border-radius:50%;border:2.5px solid #0A1628;object-fit:cover;margin-right:-12px">
+              <img src="./assets/avatar-hero2.png" alt="Cliente LC" width="42" height="42" style="width:42px;height:42px;border-radius:50%;border:2.5px solid #0A1628;object-fit:cover;margin-right:-12px">
+              <img src="./assets/avatar-hero3.png" alt="Cliente LC" width="42" height="42" style="width:42px;height:42px;border-radius:50%;border:2.5px solid #0A1628;object-fit:cover;margin-right:-12px">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#14387F,#0A2252);border:2.5px solid #0A1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;margin-right:-12px;z-index:2">+</div>
             </div>
             <div style="display:flex;flex-direction:column;gap:2px">
               <div style="display:flex;align-items:center;gap:5px">
@@ -696,7 +725,7 @@
           <div style="font-family:Georgia,serif;font-size:60px;line-height:1;color:rgba(46,151,212,0.25);position:absolute;top:16px;left:24px">"</div>
           <div style="display:flex;gap:3px;margin-bottom:16px;padding-top:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <p style="margin:0 0 20px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.8);font-style:italic">"Minha área técnica era minúscula e eu achei que não tinha jeito. A LC avaliou tudo, reposicionou as tubulações e organizou de um jeito que nunca imaginei ser possível. No final ainda sobrou espaço para instalar uma sapateira!"</p>
-          <div style="display:flex;align-items:center;gap:12px"><div style="width:42px;height:42px;border-radius:12px;background:rgba(46,151,212,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#2E97D4;font-size:16px">I</div><div><div style="font-weight:700;font-size:14px;color:#fff">Isabela Martins</div><div style="font-size:13px;color:rgba(255,255,255,0.5)">Setor Sul · Goiânia</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px"><img src="./assets/avatar-isabela.png" alt="Isabela Martins" width="42" height="42" style="width:42px;height:42px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.15)"><div><div style="font-weight:700;font-size:14px;color:#fff">Isabela Martins</div><div style="font-size:13px;color:rgba(255,255,255,0.5)">Setor Sul · Goiânia</div></div></div>
         </div>
 
         <!-- Depoimento 2: Recarga de gás 2x sem resultado → microvazamento encontrado -->
@@ -704,7 +733,7 @@
           <div style="font-family:Georgia,serif;font-size:60px;line-height:1;color:rgba(46,151,212,0.25);position:absolute;top:16px;left:24px">"</div>
           <div style="display:flex;gap:3px;margin-bottom:16px;padding-top:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <p style="margin:0 0 20px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.8);font-style:italic">"Fiz recarga de gás duas vezes com outras empresas e o ar continuava parando de gelar. A LC removeu as unidades, pressurizou tudo e achou os microvazamentos que ninguém tinha encontrado. Resolveram de verdade — nunca mais perdi gás."</p>
-          <div style="display:flex;align-items:center;gap:12px"><div style="width:42px;height:42px;border-radius:12px;background:rgba(57,211,83,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#39D353;font-size:16px">R</div><div><div style="font-weight:700;font-size:14px;color:#fff">Ricardo Nunes</div><div style="font-size:13px;color:rgba(255,255,255,0.5)">Jardim América · Goiânia</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px"><img src="./assets/avatar-ricardo.png" alt="Ricardo Nunes" width="42" height="42" style="width:42px;height:42px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.15)"><div><div style="font-weight:700;font-size:14px;color:#fff">Ricardo Nunes</div><div style="font-size:13px;color:rgba(255,255,255,0.5)">Jardim América · Goiânia</div></div></div>
         </div>
 
         <!-- Depoimento 3: Diagnóstico de compressor queimado → era só conector enferrujado -->
@@ -712,11 +741,63 @@
           <div style="font-family:Georgia,serif;font-size:60px;line-height:1;color:rgba(46,151,212,0.25);position:absolute;top:16px;left:24px">"</div>
           <div style="display:flex;gap:3px;margin-bottom:16px;padding-top:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <p style="margin:0 0 20px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.8);font-style:italic">"Outro técnico disse que o compressor estava queimado e que eu precisaria comprar uma máquina nova de R$ 15.000. Chamei a LC pra uma segunda opinião — eram só conectores enferrujados. Trocaram a fiação e o ar voltou a funcionar. Economizei R$ 15 mil!"</p>
-          <div style="display:flex;align-items:center;gap:12px"><div style="width:42px;height:42px;border-radius:12px;background:rgba(46,151,212,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#2E97D4;font-size:16px">A</div><div><div style="font-weight:700;font-size:14px;color:#fff">Alexandre Braga</div><div style="font-size:13px;color:rgba(255,255,255,0.5)">Setor Oeste · Goiânia</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px"><img src="./assets/avatar-alexandre.png" alt="Alexandre Braga" width="42" height="42" style="width:42px;height:42px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.15)"><div><div style="font-weight:700;font-size:14px;color:#fff">Alexandre Braga</div><div style="font-size:13px;color:rgba(255,255,255,0.5)">Setor Oeste · Goiânia</div></div></div>
         </div>
       </div>
       <div style="text-align:center;margin-top:44px">
         <a href="https://g.page/r/CSqnI-gxVFqZEBM/review" target="_blank" rel="noopener" class="lc-btn" style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.2);color:#fff;padding:14px 28px;border-radius:999px;font-weight:700;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Veja nossas avaliações no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARCEIROS E CLIENTES (LOGO CAROUSEL) ===== -->
+  <section style="background: linear-gradient(135deg, #F0F6FC 0%, #E2EDFA 100%); padding: 60px 0; overflow: hidden; border-top: 1px solid rgba(46,151,212,0.15); border-bottom: 1px solid rgba(46,151,212,0.15); position: relative; z-index: 10;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; text-align: center; margin-bottom: 32px;">
+      <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight: 800; font-size: 24px; color: #14387F; margin: 0 0 8px; letter-spacing: -0.02em;">
+        Empresas e Instituições que Confiam na LC
+      </h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #56697E; max-width: 600px; margin: 0 auto;">Manutenção preventiva periódica, contratos de PMOC e instalações corporativas executadas com máxima seriedade.</p>
+    </div>
+
+    <!-- Slider de Carrossel Infinito (Marquee) -->
+    <div style="width: 100%; overflow: hidden; position: relative; display: flex; align-items: center; padding: 10px 0;">
+      <!-- Sombreamento de desfoque nas bordas -->
+      <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 140px; background: linear-gradient(to right, #F0F6FC, transparent); z-index: 5; pointer-events: none;"></div>
+      <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 140px; background: linear-gradient(to left, #E2EDFA, transparent); z-index: 5; pointer-events: none;"></div>
+
+      <div class="lc-marquee-carousel-track">
+        <!-- Loop 1 -->
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-1.jpg" alt="Logo ShopEquip" style="max-height: 48px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-2.jpg" alt="Logo Betesda" style="max-height: 52px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-3.jpg" alt="Logo Sinoreg-GO" style="max-height: 46px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-4.jpg" alt="Logo ATI Elevadores" style="max-height: 48px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-5.jpg" alt="Logo Affeto" style="max-height: 50px; max-width: 140px; object-fit: contain;">
+        </div>
+        <!-- Loop 2 -->
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-1.jpg" alt="Logo ShopEquip" style="max-height: 48px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-2.jpg" alt="Logo Betesda" style="max-height: 52px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-3.jpg" alt="Logo Sinoreg-GO" style="max-height: 46px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-4.jpg" alt="Logo ATI Elevadores" style="max-height: 48px; max-width: 140px; object-fit: contain;">
+        </div>
+        <div class="lc-marquee-card">
+          <img src="./assets/logo-cliente-5.jpg" alt="Logo Affeto" style="max-height: 50px; max-width: 140px; object-fit: contain;">
+        </div>
       </div>
     </div>
   </section>

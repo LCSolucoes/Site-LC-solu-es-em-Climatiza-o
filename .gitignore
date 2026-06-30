@@ -1,0 +1,6 @@
+# arquivos de teste local (não vão para produção)
+server.mjs
+teste-responsivo.html
+node_modules/
+.DS_Store
+*.log

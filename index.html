@@ -21,6 +21,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
 
+<!-- Preload imagens críticas — LCP e header fixo -->
+<link rel="preload" as="image" href="./assets/hero-bg.png" fetchpriority="high">
+<link rel="preload" as="image" href="./assets/logo-horizontal.png">
+
 <!-- Fonts: preconnect + carregamento não-bloqueante -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,7 +214,6 @@
   .lc-ha-img{animation:lcHeroImg .92s cubic-bezier(.16,1,.3,1) .18s both}
 
   /* ===== SCROLL REVEAL ===== */
-  .lc-rev,.lc-rev-l,.lc-rev-r,.lc-rev-s{will-change:transform,opacity}
   .lc-rev{opacity:0;transform:translateY(42px);transition:opacity .74s cubic-bezier(.16,1,.3,1),transform .74s cubic-bezier(.16,1,.3,1)}
   .lc-rev-l{opacity:0;transform:translateX(-52px);transition:opacity .74s cubic-bezier(.16,1,.3,1),transform .74s cubic-bezier(.16,1,.3,1)}
   .lc-rev-r{opacity:0;transform:translateX(52px);transition:opacity .74s cubic-bezier(.16,1,.3,1),transform .74s cubic-bezier(.16,1,.3,1)}
@@ -323,7 +326,7 @@
   <!-- ===== HERO ===== -->
   <section id="topo" style="position:relative;background:#0A1628;color:#fff;overflow:hidden">
     <div id="lc-hero-bg-mobile" style="display:none;position:absolute;inset:0;z-index:0">
-      <img src="./assets/hero-bg.png" alt="" width="800" height="1000" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      <img src="./assets/hero-bg.png" alt="" width="800" height="1000" fetchpriority="high" decoding="sync" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,22,40,0.82) 0%, rgba(10,22,40,0.9) 60%, rgba(10,22,40,0.96) 100%)"></div>
     </div>
 
